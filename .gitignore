@@ -1,5 +1,9 @@
+# OJO: git NO admite comentarios al final de una línea de patrón
+# ("features/   # comentario" dejaba de ignorar features/). Comentarios siempre en su propia línea.
+
 # --- PDFs descargados y artefactos generados por el dossier ---
-papers/                       # PDFs de acceso abierto (copyright) + manifiestos
+# PDFs de acceso abierto (copyright) + manifiestos
+papers/
 papers/_manifest_descargas.csv
 papers/_no_descargados.txt
 
@@ -8,9 +12,21 @@ models/
 *.task
 
 # --- Salidas derivadas de datos clinicos (privacidad: NO subir) ---
-features/                     # CSVs de features por participante
-resultados/                   # metricas, SHAP, reportes
+# features por participante, audio procesado, embeddings
+features/
+# metricas, SHAP, predicciones por participante
+resultados/
 *_smoke.csv
+# datos por participante en la raiz (etiquetas clinicas por codigo)
+dataset_au_features.csv
+features_*_egemaps.csv
+manifest.json
+shapLimePorMuestra/
+# audio / video de participantes, en cualquier lugar
+*.wav
+*.m4a
+*.mp4
+*.npz
 
 # --- Python ---
 __pycache__/

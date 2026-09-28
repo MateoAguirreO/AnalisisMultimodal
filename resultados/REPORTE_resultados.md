@@ -9,7 +9,7 @@
 
 ## ⚠️ Corrección importante respecto a la versión anterior
 
-La versión previa de este reporte decía "11 participantes sin etiqueta → se entrenó con 69". **Eso era un bug, ya corregido.** El cruce se hacía por **cédula (documento)**, y para **11 participantes la cédula del nombre de la carpeta NO coincide con la del Excel** (errores de digitación; p. ej. carpeta `033_1061657712` vs Excel `…742`; `040_…441` vs `…447`). La llave correcta es el **CÓDIGO de participante (1–80)**, presente en ambos lados. Cruzando por código, **los 80 quedan etiquetados** (ansiedad 61/19, depresión 59/21).
+La versión previa de este reporte decía "11 participantes sin etiqueta → se entrenó con 69". **Eso era un bug, ya corregido.** El cruce se hacía por **cédula (documento)**, y para **11 participantes la cédula del nombre de la carpeta NO coincide con la del Excel** (errores de digitación; p. ej. carpeta `033_<cédula>` vs Excel `…742`; `040_…441` vs `…447`). La llave correcta es el **CÓDIGO de participante (1–80)**, presente en ambos lados. Cruzando por código, **los 80 quedan etiquetados** (ansiedad 61/19, depresión 59/21).
 
 > **Acción sugerida para ti:** revisar esas 11 cédulas discrepantes (¿está mal el nombre de la carpeta o el Excel?). No afecta el entrenamiento (se usa el código), pero importa para trazabilidad y para cruzar consentimientos.
 

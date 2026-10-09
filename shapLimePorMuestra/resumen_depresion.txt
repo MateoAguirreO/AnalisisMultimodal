@@ -1,0 +1,32 @@
+=== DEPRESION — 80 participantes (21 positivos 'DX IA'), 80 folds (16 x 5), AUC estándar ===
+
+Modelos solos:
+  au                   AUC=0.605  (n=80)
+  rostro_temporal      AUC=0.451  (n=80)
+  egemaps              AUC=0.405  (n=79)
+  voz_microventanas    AUC=0.691  (n=79)
+  voz_densa            AUC=0.577  (n=79)
+  texto_emb            AUC=0.544  (n=80)
+  texto_lexico         AUC=0.346  (n=80)
+
+Mejor combinación por número de modelos:
+  1 modelo(s): voz_microventanas                                            AUC=0.691
+  2 modelo(s): au+voz_microventanas                                         AUC=0.701
+  3 modelo(s): au+voz_microventanas+texto_emb                               AUC=0.678
+  4 modelo(s): au+voz_microventanas+voz_densa+texto_emb                     AUC=0.663
+  5 modelo(s): au+voz_microventanas+voz_densa+texto_emb+texto_lexico        AUC=0.640
+  6 modelo(s): au+rostro_temporal+voz_microventanas+voz_densa+texto_emb+texto_lexico AUC=0.599
+  7 modelo(s): au+rostro_temporal+egemaps+voz_microventanas+voz_densa+texto_emb+texto_lexico AUC=0.544
+
+MEJOR combinación de la tabla (optimista): au+voz_microventanas  AUC=0.701
+AUTO (estimación honesta de 'quedarse con la mejor'): AUC=0.558
+AUTO eligió: {'au+voz_microventanas+texto_emb': 15, 'au+voz_microventanas': 8, 'au+egemaps+voz_microventanas+texto_emb': 7, 'au+rostro_temporal+egemaps+voz_microventanas+texto_emb': 5, 'au+rostro_temporal+voz_microventanas+texto_emb': 5}
+
+Configuración elegida por rama (CV interna):
+  au: {'l1logreg': 35, 'anova_logreg': 29, 'anova_rf': 16}
+  rostro_temporal: {'l1logreg': 40, 'anova_logreg': 23, 'anova_rf': 17}
+  egemaps: {'l1logreg': 52, 'anova_rf': 17, 'anova_logreg': 11}
+  voz_microventanas: {'emb_et': 79, 'emb_logreg': 1}
+  voz_densa: {'emb_et': 44, 'emb_logreg': 36}
+  texto_emb: {'emb_logreg': 58, 'emb_et': 22}
+  texto_lexico: {'logreg': 53, 'rf': 27}

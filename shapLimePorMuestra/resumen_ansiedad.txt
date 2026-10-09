@@ -1,0 +1,32 @@
+=== ANSIEDAD — 80 participantes (19 positivos 'DX IA'), 80 folds (16 x 5), AUC estándar ===
+
+Modelos solos:
+  au                   AUC=0.660  (n=80)
+  rostro_temporal      AUC=0.446  (n=80)
+  egemaps              AUC=0.633  (n=79)
+  voz_microventanas    AUC=0.524  (n=79)
+  voz_densa            AUC=0.480  (n=79)
+  texto_emb            AUC=0.408  (n=80)
+  texto_lexico         AUC=0.375  (n=80)
+
+Mejor combinación por número de modelos:
+  1 modelo(s): au                                                           AUC=0.660
+  2 modelo(s): au+egemaps                                                   AUC=0.682
+  3 modelo(s): au+egemaps+voz_microventanas                                 AUC=0.652
+  4 modelo(s): au+egemaps+voz_microventanas+texto_lexico                    AUC=0.621
+  5 modelo(s): au+egemaps+voz_microventanas+voz_densa+texto_lexico          AUC=0.580
+  6 modelo(s): au+rostro_temporal+egemaps+voz_microventanas+voz_densa+texto_lexico AUC=0.543
+  7 modelo(s): au+rostro_temporal+egemaps+voz_microventanas+voz_densa+texto_emb+texto_lexico AUC=0.486
+
+MEJOR combinación de la tabla (optimista): au+egemaps  AUC=0.682
+AUTO (estimación honesta de 'quedarse con la mejor'): AUC=0.579
+AUTO eligió: {'au+egemaps': 12, 'au': 10, 'au+egemaps+voz_densa': 9, 'au+egemaps+voz_microventanas': 6, 'egemaps+voz_microventanas': 5}
+
+Configuración elegida por rama (CV interna):
+  au: {'anova_logreg': 43, 'l1logreg': 33, 'anova_rf': 4}
+  rostro_temporal: {'l1logreg': 49, 'anova_rf': 26, 'anova_logreg': 5}
+  egemaps: {'anova_rf': 66, 'l1logreg': 11, 'anova_logreg': 3}
+  voz_microventanas: {'emb_et': 57, 'emb_logreg': 23}
+  voz_densa: {'emb_et': 51, 'emb_logreg': 29}
+  texto_emb: {'emb_logreg': 64, 'emb_et': 16}
+  texto_lexico: {'logreg': 70, 'rf': 10}

@@ -21,7 +21,6 @@ resultados/
 dataset_au_features.csv
 features_*_egemaps.csv
 manifest.json
-shapLimePorMuestra/
 # audio / video de participantes, en cualquier lugar
 *.wav
 *.m4a

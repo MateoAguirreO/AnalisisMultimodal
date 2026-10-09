@@ -1,0 +1,10 @@
+rama_embedding,categoria,n_features,r2_todas,r2_top50,r2_azar50,ratio,ganancia_vs_azar,auc_clasificador_logistico_oof,n
+texto_emb,lexico,1,0.361,0.331,0.176,0.917,0.155,0.587,80
+voz_densa,energia,13,0.568,0.492,0.538,0.861,-0.046,0.546,79
+voz_densa,espectral,29,0.735,0.629,0.64,0.84,-0.011,0.546,79
+voz_densa,frecuencia,23,0.638,0.534,0.58,0.802,-0.046,0.546,79
+voz_densa,temporal,6,0.758,0.689,0.69,0.906,-0.001,0.546,79
+voz_microventanas,energia,14,0.52,0.445,0.448,0.852,-0.003,0.516,79
+voz_microventanas,espectral,28,0.632,0.507,0.522,0.748,-0.016,0.516,79
+voz_microventanas,frecuencia,20,0.629,0.575,0.565,0.921,0.009,0.516,79
+voz_microventanas,temporal,6,0.611,0.58,0.549,0.939,0.031,0.516,79
